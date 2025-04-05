@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>type</title>
+    <link rel="stylesheet" type="text/css" href="CSS/card.css" />
+  </head>
+  <body
+    style="
+      font-family: Arial, sans-serif;
+      background-color: #9ec28c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: row;
+    "
+  >
+  <%- include('navbarLogin') %> 
+  <div class="card" onclick="window.location.href='/findStudy'">
+    <h1>เพื่อนเรียน</h1>
+    <img
+      src="Pic/study.png"
+      alt="Team-ups"
+      style="float: left; width: 90%; height: 50% ; object-fit: contain;"
+    />
+  </div>
+  <div class="card" onclick="window.location.href='/matchPlay'">
+    <h1>เพื่อนเล่น</h1>
+    <img
+      src="Pic/game.png"
+      alt="Team-ups"
+      style="float: left; width: 100%; height: 50% ; object-fit: contain;"
+    />
+  </div>
+  </body>
+</html>

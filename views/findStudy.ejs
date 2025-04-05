@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>เพื่อนเรียน</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
+  </head>
+  <body>
+    <%- include('navbarLogin') %> 
+    <div class="containerFindStudy">
+      <form action="/match" method="post">
+        <h1>เพื่อนเรียน</h1>
+        <h2>Subject</h2>
+        <select name="subject">
+          <option>SU401</option>
+          <option>SU402</option>
+          <option>SU403</option>
+          <option>SU404</option>
+        </select>
+        <h2>Sect</h2>
+        <select name="sect">
+          <option>1001</option>
+          <option>1002</option>
+          <option>1003</option>
+          <option>1004</option>
+        </select>
+        <br><br>
+        <button class="button" type="submit">
+          Match
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

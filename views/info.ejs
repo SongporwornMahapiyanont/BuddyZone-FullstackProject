@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Info</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/form.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/upload.css" />
+  </head>
+  <body>
+    <%- include('navbar') %> 
+    <% if (message) { %>
+      <p class="registernonsuccessfully"><%= message %></p>
+    <% } %>
+    <div class="container">
+      <h1 class="info">Sign Up form</h1>
+      <div class="info_container">
+        <div class="left-column" class="login_container">
+          <form class="form" action="/register" method="post" enctype="multipart/form-data">
+            <span class="input-span"> 
+              <label for="email" class="label">Email</label>
+              <input type="email" name="email" id="email" placeholder="Please, Input Your Email"/>
+            </span>
+            <span class="input-span"> 
+              <label for="password" class="label">password</label>
+              <input type="password" name="password" id="password" placeholder="Please, Input Your password"/>
+            </span>
+            <span class="input-span">
+              <label for="nickname" class="label">Nickname</label>
+              <input type="nickname" name="nickname" id="nickname" placeholder="Please, Input Your Nickname"/>
+            </span>
+            <span class="input-span">
+              <label for="faculty" class="label">Faculty</label>
+              <input type="faculty" name="faculty" id="faculty" placeholder="Please, Input Your Faculty"
+            /></span>
+            <span class="input-span">
+              <label for="major" class="label">Major</label>
+              <input type="major" name="major" id="major" placeholder="Please, Input Your Major"
+            /></span>
+            <span class="input-span">
+              <label for="mbti" class="label">MBTI</label>
+              <input type="mbti" name="mbti" id="mbti" oninput="this.value = this.value.toUpperCase()" placeholder="Please, Complete the MBTI quiz before registering"/>
+            </span>
+            <span class="input-span">
+              <label for="facebook" class="label">Facebook</label>
+              <input type="facebook" name="facebook" id="facebook" placeholder="Please, Input Your facebook">
+            </span>
+            <span class="input-span">
+              <label for="instagram" class="label">Instagram</label>
+              <input type="instagram" name="instagram" id="instagram" placeholder="Please, Input Your instagram"
+            /></span>
+            <span class="input-span">
+              <label for="twitter" class="label">Twitter</label>
+              <input type="twitter" name="twitter" id="twitter" placeholder="Optional"
+            /></span>
+            <span class="input-span">
+              <label for="subject" class="label">Subject</label>
+              <select name="subject" id="subject">
+                  <option value="SU401">SU401</option>
+                  <option value="SU402">SU402</option>
+                  <option value="SU403">SU403</option>
+                  <option value="SU404">SU404</option>
+              </select>
+            </span>
+            <span class="input-span">
+              <label for="sect" class="label">Sect</label>
+              <select name="sect" id="sect">
+                  <option value="1001">1001</option>
+                  <option value="1002">1002</option>
+                  <option value="1003">1003</option>
+                  <option value="1004">1004</option>
+              </select>
+            </span>
+          
+            <div class="right-column">
+              <div class="uploadbox">
+                <div class="folder">
+                  <div class="front-side">
+                    <div class="tip"></div>
+                    <div class="cover"></div>
+                  </div>
+                  <div class="back-side cover"></div>
+                </div>
+                <label class="custom-file-upload">
+                  <input class="title" type="file" name="img" />
+                  Choose a file
+                </label>
+              </div>
+              <br /><br />
+              <label>Upload your photo here:</label>
+            </div>
+            <input type="submit" value="Click to submit">
+            <!-- <input class="button" onclick="window.location.href='/'">Sign-up</input> -->
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>

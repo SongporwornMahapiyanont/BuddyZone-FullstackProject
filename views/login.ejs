@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="CSS/form.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
+  </head>
+  <body>
+    <%- include('navbar') %> 
+    <img
+      src="Pic/login.png"
+      alt="Team-ups"
+      style="float: left; width: 50%; height: 50% ; object-fit: contain;"
+    />
+    <% if (message) { %>
+      <p class="registersuccessfully"><%= message %></p>  <!-- แสดงข้อความที่ส่งมาจากเซิร์ฟเวอร์ -->
+    <% } %>
+    <div class="half_container">
+      <form class="form" method="post" action="/">  <!-- เปลี่ยน action เป็น /login -->
+        <h1>Login</h1>
+        <span class="input-span">
+          <label for="email" class="label">Username</label>
+          <input type="email" name="email" id="email" required />
+        </span>
+        <span class="input-span">
+          <label for="password" class="label">Password</label>
+          <input type="password" name="password" id="password" required />
+        </span>
+        <span class="span"><a href="#">Forgot password?</a></span>
+        <input class="submit" type="submit" value="Log in" />  <!-- เปลี่ยนเป็น type="submit" -->
+        <span class="span">Don't have an account? <a href="/register">Sign up</a></span>
+      </form>
+    </div>
+  </body>
+</html>

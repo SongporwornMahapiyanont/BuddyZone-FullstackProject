@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เพื่อนเล่น</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <script>
+        function toggleSelect(element) {
+            element.classList.toggle('selected');
+            updateSelectedOptions();
+        }
+
+        function updateSelectedOptions() {
+            const selected = [];
+            document.querySelectorAll('.option.selected').forEach(option => {
+                selected.push(option.getAttribute('data-value'));
+            });
+
+            document.getElementById('selectedOptions').value = selected.join(',');
+        }
+    </script>
+    <style>
+        .selected {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <form action="/findPlay" method="post">
+        <div class="container">
+            <h1>เพื่อนเล่น</h1>
+            <div class="options">
+                <div class="option" data-value="Sport" onclick="toggleSelect(this)">⚽ Sport</div>
+                <div class="option" data-value="Workout" onclick="toggleSelect(this)">🏋️ Workout</div>
+                <div class="option" data-value="MC" onclick="toggleSelect(this)">📢 MC</div>
+                <div class="option" data-value="Boardgames" onclick="toggleSelect(this)">🎲 Boardgames</div>
+                <div class="option" data-value="Games" onclick="toggleSelect(this)">🎮 Games</div>
+                <div class="option" data-value="Book" onclick="toggleSelect(this)">📖 Book</div>
+            </div>
+            <!-- input hidden ส่งค่า -->
+            <input type="hidden" name="selectedOptions" id="selectedOptions">
+            <button type="submit">Match</button>
+        </div>
+    </form>
+</body>
+</html>

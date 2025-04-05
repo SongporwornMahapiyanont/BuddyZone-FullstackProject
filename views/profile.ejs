@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+<body>
+    <%- include('navbarLogin') %> 
+    <h1>โปรไฟล์ของคุณ</h1>
+    <% if (user) { %>
+        <p><strong>ชื่อผู้ใช้:</strong> <%= user.Name %></p>
+        <p><strong>อีเมล:</strong> <%= user.Email %></p>
+        <p><strong>คณะ:</strong> <%= user.Faculty %></p>
+        <p><strong>สาขาวิชา:</strong> <%= user.Major %></p>
+        <p><strong>MBTI:</strong> <%= user.MBTI %></p>
+        <p><strong>Facebook:</strong> <%= user.Facebook %></p>
+        <p><strong>Instagram:</strong> <%= user.Instagram %></p>
+
+        <% if (profileImage) { %>
+            <img src="<%= profileImage %>" alt="Profile Image" width="150">
+        <% } else { %>
+            <p>ไม่มีรูปภาพ</p>
+        <% } %>
+    <% } else { %>
+        <p>ไม่พบข้อมูลผู้ใช้</p>
+    <% } %>
+</body>
+</html>

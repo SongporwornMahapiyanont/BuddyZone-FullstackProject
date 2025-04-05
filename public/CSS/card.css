@@ -1,0 +1,31 @@
+.card {
+  box-sizing: border-box;
+  width: 30%;
+  height: 60%;
+  max-width: 350px;
+  background: #edf1d6;
+  border: 1px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+  margin: 5%;
+}
+
+.card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
