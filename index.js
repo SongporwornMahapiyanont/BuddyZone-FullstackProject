@@ -219,7 +219,8 @@ app.get('/profile/:email', (req, res) => {
     });
 });
 
-app.listen(port, '0.0.0.0', async (req, res) => {
-    console.log(`Example app listening on port ${port}`)
-})
+app.listen(PORT, '0.0.0.0', async (req, res) => {
+    console.log(`Example app listening on port ${PORT}`);
+});
+
 
