@@ -5,6 +5,7 @@ const multer = require('multer');
 const fs = require('fs');
 const session = require('express-session'); // เพิ่ม session
 const app = express();
+const PORT = process.env.PORT || 3000; 
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -218,6 +219,7 @@ app.get('/profile/:email', (req, res) => {
     });
 });
 
-app.listen(8200, 'localhost', (req, res) => {
-    console.log('Started on Port 8080');
-});
+app.listen(port, '0.0.0.0', async (req, res) => {
+    console.log(`Example app listening on port ${port}`)
+})
+
